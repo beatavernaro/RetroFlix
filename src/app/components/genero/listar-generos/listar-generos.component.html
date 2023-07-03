@@ -1,0 +1,26 @@
+<section class="container">
+    <div>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 container">
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef>ID</th>
+                <td mat-cell *matCellDef="let genero">{{genero.id}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="nome">
+                <th mat-header-cell *matHeaderCellDef>Nome</th>
+                <td mat-cell *matCellDef="let genero">{{genero.nome}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="quantidade">
+                <th mat-header-cell *matHeaderCellDef>Quantidade de filmes</th>
+                <td mat-cell *matCellDef="let genero">{{genero.quantidade}}</td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+        </table>
+        <button mat-raised-button color="accent" type="button" class="botao" routerLink="/criarGenero">Adicionar novo
+            gênero</button>
+    </div>
+</section>
