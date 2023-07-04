@@ -36,5 +36,19 @@
             "sinopse": "O confronto final entre as forças do bem e do mal que lutam pelo controle do futuro da Terra Média se aproxima. Sauron planeja um grande ataque a Minas Tirith, capital de Gondor, o que faz com que Gandalf e Pippin partam para o local na intenção de ajudar a resistência.",
             "imagem": "https://upload.wikimedia.org/wikipedia/pt/0/0d/EsdlaIII.jpg"
         }
+    ],
+    "generos": [
+        {
+            "id": 1,
+            "nome": "Ação"
+        },
+        {
+            "id": 2,
+            "nome": "Aventura"
+        },
+        {
+            "id": 3,
+            "nome": "Terror"
+        }
     ]
 }

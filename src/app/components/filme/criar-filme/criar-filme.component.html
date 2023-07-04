@@ -2,25 +2,26 @@
     <header>
         <h2>Adicione um novo filme:</h2>
     </header>
-    <form>
+
+    <form [formGroup]="form">
         <mat-form-field class="formbg">
             <mat-label>Título do filme</mat-label>
-            <input matInput>
+            <input matInput formControlName="titulo">
         </mat-form-field>
 
         <mat-form-field class="formbg">
             <mat-label>Diretor</mat-label>
-            <input matInput>
+            <input matInput formControlName="diretor">
         </mat-form-field>
 
         <mat-form-field class="formbg">
             <mat-label>Duração</mat-label>
-            <input matInput>
+            <input matInput formControlName="duracao">
         </mat-form-field>
-
+<!-- AQUI NO SELECT PRECISO TER UM GET PARA TODOS OS GENEROS-->
         <mat-form-field class="formbg">
             <mat-label>Gênero</mat-label>
-            <mat-select>
+            <mat-select formControlName="genero">
                 <mat-option value="one">ngFor aqui</mat-option>
                 <mat-option value="two">Second option</mat-option>
             </mat-select>
@@ -28,18 +29,19 @@
 
         <mat-form-field class="formbg">
             <mat-label>Imagem</mat-label>
-            <input matInput>
+            <input matInput formControlName="imagem">
         </mat-form-field>
 
         <mat-form-field class="formbg">
             <mat-label>Sinopse</mat-label>
-            <textarea matInput></textarea>
+            <textarea matInput formControlName="sinopse"></textarea>
         </mat-form-field>
+
     </form>
     <div class="alinha-botao">
         <button mat-raised-button color="accent" type="button" class="botao"
-            routerLink="/listarFilmes" (click)="postFilme()">Adicionar</button>
+            routerLink="/listarFilmes" (click)="onSubmit()">Adicionar</button>
         <button mat-raised-button color="accent" type="button" class="botao"
-            routerLink="/listarFilmes">Cancelar</button>
+            routerLink="/listarFilmes" (click)="onCancel()">Cancelar</button>
     </div>
 </section>

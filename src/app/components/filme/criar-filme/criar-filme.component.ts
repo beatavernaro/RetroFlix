@@ -44,8 +44,12 @@ export class CriarFilmeComponent {
        this.router.navigate(['/listarFilmes'])
      })
    }*/
-  postFilme() {
-    console.log('this.form.value')
+  onSubmit() {
+    console.log(this.form.value)
+  }
+
+  onCancel() {
+
   }
 
 }
