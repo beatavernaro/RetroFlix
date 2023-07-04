@@ -20,6 +20,8 @@ import { ListarGenerosComponent } from './components/genero/listar-generos/lista
 import { EditarFilmeComponent } from './components/filme/editar-filme/editar-filme.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ExcluirFilmeComponent } from './components/filme/excluir-filme/excluir-filme.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { ExcluirFilmeComponent } from './components/filme/excluir-filme/excluir-
     MatIconModule,
     MatSelectModule,
     MatTableModule,
-    MatDialogModule
+    MatDialogModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

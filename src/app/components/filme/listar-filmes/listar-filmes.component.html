@@ -1,11 +1,9 @@
 <section class="container">
 
     <div class="mural">
-        <app-card-filme></app-card-filme>
-        <app-card-filme></app-card-filme>
-        <app-card-filme></app-card-filme>
-        <app-card-filme></app-card-filme>
-
+        <div *ngFor="let filme of listaFilmes">
+        <app-card-filme [filme]="filme"></app-card-filme>
+    </div>
     </div>
 </section>
 
@@ -14,4 +12,4 @@
 <ng-template #semPensamentos>
     <p>Ainda não há pensamentos</p>
 </ng-template>
--->
+--> 

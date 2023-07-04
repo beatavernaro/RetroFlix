@@ -27,13 +27,18 @@
         </mat-form-field>
 
         <mat-form-field class="formbg">
+            <mat-label>Imagem</mat-label>
+            <input matInput>
+        </mat-form-field>
+
+        <mat-form-field class="formbg">
             <mat-label>Sinopse</mat-label>
             <textarea matInput></textarea>
         </mat-form-field>
     </form>
     <div class="alinha-botao">
         <button mat-raised-button color="accent" type="button" class="botao"
-            routerLink="/listarFilmes">Adicionar</button>
+            routerLink="/listarFilmes" (click)="postFilme()">Adicionar</button>
         <button mat-raised-button color="accent" type="button" class="botao"
             routerLink="/listarFilmes">Cancelar</button>
     </div>
