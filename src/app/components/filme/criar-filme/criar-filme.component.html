@@ -18,12 +18,11 @@
             <mat-label>Duração</mat-label>
             <input matInput formControlName="duracao">
         </mat-form-field>
-<!-- AQUI NO SELECT PRECISO TER UM GET PARA TODOS OS GENEROS-->
+        
         <mat-form-field class="formbg">
             <mat-label>Gênero</mat-label>
             <mat-select formControlName="genero">
-                <mat-option value="one">ngFor aqui</mat-option>
-                <mat-option value="two">Second option</mat-option>
+                <mat-option *ngFor="let genero of listaGenero" [value]="genero"> {{genero.nome}} </mat-option>
             </mat-select>
         </mat-form-field>
 

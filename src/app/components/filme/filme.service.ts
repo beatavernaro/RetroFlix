@@ -11,14 +11,21 @@ export class FilmeService {
   private readonly API = "http://localhost:3000/filmes";
   constructor(private http: HttpClient) { }
 
-
   getFilmes(): Observable<Filme[]> {
     return this.http.get<Filme[]>(this.API)
+  }
+  getById(id: number): Observable<Filme> {
+    const url = `${this.API}/${id}`
+    return this.http.get<Filme>(url)
   }
 
   postFilme(filme: Filme): Observable<Filme> {
     return this.http.post<Filme>(this.API, filme)
   }
 
+  putFilme(filme: Filme): Observable<Filme>{
+    const url = `${this.API}/${filme.id}`
+    return this.http.put<Filme>(url, filme)
+  }
 
 }

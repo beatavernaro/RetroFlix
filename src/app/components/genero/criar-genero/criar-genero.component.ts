@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Genero } from '../../genero/genero';
+import { GeneroService } from '../../genero/genero.service';
 
 
 @Component({
@@ -8,5 +12,29 @@ import { Component } from '@angular/core';
 })
 export class CriarGeneroComponent {
 
-  
+  form: FormGroup;
+
+  constructor(
+    private generoService: GeneroService,
+    private router: Router,
+    private formBuilder: FormBuilder) {
+
+    this.form = this.formBuilder.group({
+      nome: [null],
+    })
+  };
+  genero: Genero = {
+    id: 0,
+    nome: ''
+  }
+
+  onSubmit() {
+    console.log(this.form.value)
+    this.generoService.postGenero(this.form.value).subscribe(result => console.log)
+  }
+
+  onCancel() {
+
+  }
+
 }

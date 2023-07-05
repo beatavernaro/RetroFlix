@@ -2,10 +2,10 @@
     <header>
         <h2>Editar filme:</h2>
     </header>
-    <form>
+    <form [formGroup]="form">
         <mat-form-field class="formbg">
             <mat-label>Título do filme</mat-label>
-            <input matInput>
+            <input matInput formControlName="titulo">
         </mat-form-field>
 
         <mat-form-field class="formbg">

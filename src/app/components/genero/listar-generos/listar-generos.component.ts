@@ -1,15 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Genero } from '../genero';
-
-
-
-const dadosTabela: Genero[] = [
-  { id: 1, nome: 'Ação'},
-  { id: 2, nome: 'Aventura'},
-  { id: 3, nome: 'Terror'}
-
-];
+import { GeneroService } from '../genero.service';
 
 @Component({
   selector: 'app-listar-generos',
@@ -17,9 +9,18 @@ const dadosTabela: Genero[] = [
   styleUrls: ['./listar-generos.component.css']
 })
 
-
 export class ListarGenerosComponent {
-  displayedColumns: string[] = ['id', 'nome', 'quantidade'];
-  dataSource = dadosTabela;
+  constructor(private generoService: GeneroService) { };
 
+  listaGenero: Genero[] = [];
+
+  colunas: string[] = ['id', 'nome'];
+
+
+  ngOnInit(): void {
+    this.generoService.getGenero().subscribe((data) =>
+      this.listaGenero = data,
+    )
+    console.log(this.listaGenero)
+  };
 }

@@ -3,6 +3,8 @@ import { FilmeService } from '../filme.service';
 import { Filme } from '../filme';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Genero } from '../../genero/genero';
+import { GeneroService } from '../../genero/genero.service';
 
 @Component({
   selector: 'app-criar-filme',
@@ -14,7 +16,8 @@ export class CriarFilmeComponent {
   form: FormGroup;
 
   constructor(
-    private service: FilmeService,
+    private filmeService: FilmeService,
+    private generoService: GeneroService,
     private router: Router,
     private formBuilder: FormBuilder) {
 
@@ -39,13 +42,21 @@ export class CriarFilmeComponent {
     imagem: ''
   }
 
+  listaGenero: Genero[] = []
+
+  ngOnInit(): void {
+    this.generoService.getGenero().subscribe((listaGenero) =>
+      this.listaGenero = listaGenero
+    )
+  };
+
   /* postFilme(){
      return this.service.postFilme(this.filme).subscribe(() => {
        this.router.navigate(['/listarFilmes'])
      })
    }*/
   onSubmit() {
-    console.log(this.form.value)
+    this.filmeService.postFilme(this.form.value).subscribe(result => console.log)
   }
 
   onCancel() {
