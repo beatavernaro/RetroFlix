@@ -50,11 +50,6 @@ export class CriarFilmeComponent {
     )
   };
 
-  /* postFilme(){
-     return this.service.postFilme(this.filme).subscribe(() => {
-       this.router.navigate(['/listarFilmes'])
-     })
-   }*/
   onSubmit() {
     this.filmeService.postFilme(this.form.value).subscribe(result => console.log)
   }
@@ -64,5 +59,3 @@ export class CriarFilmeComponent {
   }
 
 }
-//TERMINAR DE CRIAR O POST, DESCOBRIR COMO LINK O LABEL COM O OBJETO,
-//formControlName

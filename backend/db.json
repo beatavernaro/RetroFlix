@@ -37,25 +37,16 @@
       "imagem": "https://upload.wikimedia.org/wikipedia/pt/0/0d/EsdlaIII.jpg"
     },
     {
-      "titulo": "asd",
-      "diretor": "ads",
-      "duracao": "asd",
-      "genero": "Aventura",
-      "sinopse": "asdasd",
+      "titulo": "Harry Potter",
+      "diretor": "David Heyman",
+      "duracao": "152",
+      "genero": {
+        "id": 2,
+        "nome": "Aventura"
+      },
+      "sinopse": "Harry Potter é um garoto órfão que vive infeliz com seus tios, os Dursleys. Ele recebe uma carta contendo um convite para ingressar em Hogwarts, uma famosa escola especializada em formar jovens bruxos.",
       "imagem": "https://upload.wikimedia.org/wikipedia/pt/thumb/1/1d/Harry_Potter_Pedra_Filosofal_2001.jpg/250px-Harry_Potter_Pedra_Filosofal_2001.jpg",
       "id": 4
-    },
-    {
-      "titulo": "filme mais um",
-      "diretor": "eu",
-      "duracao": "7373",
-      "genero": {
-        "nome": "Romance",
-        "id": 4
-      },
-      "sinopse": "asdasdasd",
-      "imagem": "https://i0.statig.com.br/bancodeimagens/0v/10/gk/0v10gkja6fccyqrxefzjaurpl.jpg",
-      "id": 5
     }
   ],
   "generos": [
@@ -68,16 +59,24 @@
       "nome": "Aventura"
     },
     {
-      "id": 3,
-      "nome": "Terror"
-    },
-    {
       "nome": "Romance",
       "id": 4
     },
     {
       "nome": "Drama",
       "id": 5
+    },
+    {
+      "nome": "Comédia",
+      "id": 6
+    },
+    {
+      "nome": "Ficção Cientifica",
+      "id": 7
+    },
+    {
+      "nome": "Terror",
+      "id": 8
     }
   ]
 }

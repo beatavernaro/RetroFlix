@@ -23,9 +23,14 @@ export class FilmeService {
     return this.http.post<Filme>(this.API, filme)
   }
 
-  putFilme(filme: Filme): Observable<Filme>{
+  putFilme(filme: Filme): Observable<Filme> {
     const url = `${this.API}/${filme.id}`
     return this.http.put<Filme>(url, filme)
+  }
+
+  deleteFilme(id: number) {
+    const url = `${this.API}/${id}`
+    return this.http.delete<Filme>(url)
   }
 
 }

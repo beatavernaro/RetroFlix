@@ -14,11 +14,28 @@ export class GeneroService {
   getGenero(): Observable<Genero[]> {
     return this.http.get<Genero[]>(this.API)
   }
-  
+
+  getById(id: number): Observable<Genero> {
+    const url = `${this.API}/${id}`
+    return this.http.get<Genero>(url)
+  }
+
   postGenero(genero: Genero): Observable<Genero> {
     return this.http.post<Genero>(this.API, genero)
   }
+
+  putGenero(genero: Genero): Observable<Genero> {
+    const url = `${this.API}/${genero.id}`
+    return this.http.put<Genero>(url, genero)
+  }
+
+  deleteGenero(id: number) {
+    const url = `${this.API}/${id}`
+    return this.http.delete<Genero>(url)
+  }
+
 }
+
 
 
 

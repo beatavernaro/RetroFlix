@@ -14,13 +14,12 @@ export class ListarGenerosComponent {
 
   listaGenero: Genero[] = [];
 
-  colunas: string[] = ['id', 'nome'];
+  colunas: string[] = ['id', 'nome', 'acoes'];
 
 
   ngOnInit(): void {
     this.generoService.getGenero().subscribe((data) =>
       this.listaGenero = data,
     )
-    console.log(this.listaGenero)
   };
 }

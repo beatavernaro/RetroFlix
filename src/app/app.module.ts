@@ -22,6 +22,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ExcluirFilmeComponent } from './components/filme/excluir-filme/excluir-filme.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EditarGeneroComponent } from './components/genero/editar-genero/editar-genero.component';
+import { ExcluirGeneroComponent } from './components/genero/excluir-genero/excluir-genero.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     ListarGenerosComponent,
     EditarFilmeComponent,
-    ExcluirFilmeComponent
+    ExcluirFilmeComponent,
+    EditarGeneroComponent,
+    ExcluirGeneroComponent
   ],
   imports: [
     BrowserModule,

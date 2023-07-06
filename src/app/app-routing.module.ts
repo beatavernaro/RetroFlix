@@ -6,6 +6,8 @@ import { CriarGeneroComponent } from './components/genero/criar-genero/criar-gen
 import { ListarGenerosComponent } from './components/genero/listar-generos/listar-generos.component';
 import { EditarFilmeComponent } from './components/filme/editar-filme/editar-filme.component';
 import { ExcluirFilmeComponent } from './components/filme/excluir-filme/excluir-filme.component';
+import { EditarGeneroComponent } from './components/genero/editar-genero/editar-genero.component';
+import { ExcluirGeneroComponent } from './components/genero/excluir-genero/excluir-genero.component';
 
 const routes: Routes = [
   {
@@ -22,11 +24,11 @@ const routes: Routes = [
     component: ListarFilmesComponent
   },
   {
-    path: 'editarFilme',
+    path: 'editarFilme/:id',
     component: EditarFilmeComponent
   },
   {
-    path: 'excluirFilme',
+    path: 'excluirFilme/:id',
     component: ExcluirFilmeComponent
   },
   {
@@ -36,6 +38,14 @@ const routes: Routes = [
   {
     path: 'criarGenero',
     component: CriarGeneroComponent
+  },
+  {
+    path: 'editarGenero/:id',
+    component: EditarGeneroComponent
+  },
+  {
+    path: 'excluirGenero/:id',
+    component: ExcluirGeneroComponent
   }
 ];
 
