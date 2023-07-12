@@ -32,7 +32,8 @@ export class EditarGeneroComponent {
       this.genero = data
     })
   }
-  onEdit() {
+
+  onEdit(){
     this.generoService.putGenero(this.genero).subscribe(() => {
       this.router.navigate(['/listarGeneros'])
     })

@@ -12,14 +12,10 @@ export class ExcluirFilmeComponent {
 
   filme: Filme = {
     id: 0,
-    titulo: '',
+    nomeFilme: '',
     diretor: '',
     duracao: 0,
-    genero: {
-      id: 1,
-      nome: '',
-
-    },
+    genero: 1,
     sinopse: '',
     imagem: ''
   }

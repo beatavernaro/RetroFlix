@@ -1,41 +1,38 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpRequest } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Genero } from '../genero/genero';
+import { FocusMonitor } from '@angular/cdk/a11y';
+import { Form } from '@angular/forms';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class GeneroService {
-
-  private readonly API = "http://localhost:3000/generos"
-  constructor(private http: HttpClient) { }
+  private readonly API = 'https://localhost:7070/Filme';
+  constructor(private http: HttpClient) {}
 
   getGenero(): Observable<Genero[]> {
-    return this.http.get<Genero[]>(this.API)
+    const url = `${this.API}/VerGeneros`
+    return this.http.get<Genero[]>(url);
   }
 
   getById(id: number): Observable<Genero> {
-    const url = `${this.API}/${id}`
-    return this.http.get<Genero>(url)
+    const url = `${this.API}/BuscaGenerosId/${id}`;
+    return this.http.get<Genero>(url);
   }
-
   postGenero(genero: Genero): Observable<Genero> {
-    return this.http.post<Genero>(this.API, genero)
+    const url = `${this.API}/PostarGeneros`
+    return this.http.post<Genero>(url, genero);
   }
 
   putGenero(genero: Genero): Observable<Genero> {
-    const url = `${this.API}/${genero.id}`
+    const url = `${this.API}/EditaGeneroID/${genero.id}`
     return this.http.put<Genero>(url, genero)
   }
 
   deleteGenero(id: number) {
-    const url = `${this.API}/${id}`
+    const url = `${this.API}/DeleteGeneroId/${id}`
     return this.http.delete<Genero>(url)
   }
-
 }
-
-
-
-

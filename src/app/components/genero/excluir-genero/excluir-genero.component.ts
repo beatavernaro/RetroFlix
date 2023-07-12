@@ -24,10 +24,11 @@ export class ExcluirGeneroComponent {
       this.genero = data
     })
   }
-  
+
   onDelete() {
-    this.generoService.deleteGenero(this.genero.id).subscribe(() =>{
+    debugger;
+    this.generoService.deleteGenero(this.genero.id).subscribe(()=>{
       this.router.navigate(['/listarGeneros'])
     })
-   }
+  }
 }

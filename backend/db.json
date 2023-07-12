@@ -37,7 +37,7 @@
       "imagem": "https://upload.wikimedia.org/wikipedia/pt/0/0d/EsdlaIII.jpg"
     },
     {
-      "titulo": "Harry Potter",
+      "titulo": "Harry Potter e a Pedra Filosofal",
       "diretor": "David Heyman",
       "duracao": "152",
       "genero": {
@@ -47,13 +47,21 @@
       "sinopse": "Harry Potter é um garoto órfão que vive infeliz com seus tios, os Dursleys. Ele recebe uma carta contendo um convite para ingressar em Hogwarts, uma famosa escola especializada em formar jovens bruxos.",
       "imagem": "https://upload.wikimedia.org/wikipedia/pt/thumb/1/1d/Harry_Potter_Pedra_Filosofal_2001.jpg/250px-Harry_Potter_Pedra_Filosofal_2001.jpg",
       "id": 4
+    },
+    {
+      "titulo": "Harry Potter e a Câmara Secreta",
+      "diretor": "Chris Columbus",
+      "duracao": "162",
+      "genero": {
+        "id": 2,
+        "nome": "Aventura"
+      },
+      "sinopse": "Após as sofríveis férias na casa dos tios, Harry Potter se prepara para voltar a Hogwarts e começar seu segundo ano na escola de bruxos.",
+      "imagem": "https://upload.wikimedia.org/wikipedia/pt/3/33/Chamber_of_Secrets.jpg",
+      "id": 5
     }
   ],
   "generos": [
-    {
-      "id": 1,
-      "nome": "Ação"
-    },
     {
       "id": 2,
       "nome": "Aventura"
@@ -67,16 +75,16 @@
       "id": 5
     },
     {
-      "nome": "Comédia",
-      "id": 6
-    },
-    {
       "nome": "Ficção Cientifica",
       "id": 7
     },
     {
       "nome": "Terror",
       "id": 8
+    },
+    {
+      "nome": "Ação",
+      "id": 9
     }
   ]
 }

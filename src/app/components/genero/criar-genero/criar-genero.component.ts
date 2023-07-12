@@ -29,8 +29,7 @@ export class CriarGeneroComponent {
   }
 
   onSubmit() {
-    console.log(this.form.value)
-    this.generoService.postGenero(this.form.value).subscribe(result => console.log)
+    this.generoService.postGenero(this.form.value).subscribe()
   }
 
   onCancel() {
