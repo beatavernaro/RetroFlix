@@ -9,25 +9,25 @@ import { Form } from '@angular/forms';
   providedIn: 'root',
 })
 export class GeneroService {
-  private readonly API = 'https://localhost:7070/Filme';
+  private readonly API = 'https://localhost:7070/api/Genero';
   constructor(private http: HttpClient) {}
 
   getGenero(): Observable<Genero[]> {
-    const url = `${this.API}/VerGeneros`
+    const url = `${this.API}`
     return this.http.get<Genero[]>(url);
   }
 
   getById(id: number): Observable<Genero> {
-    const url = `${this.API}/BuscaGenerosId/${id}`;
+    const url = `${this.API}/${id}`;
     return this.http.get<Genero>(url);
   }
   postGenero(genero: Genero): Observable<Genero> {
-    const url = `${this.API}/PostarGeneros`
+    const url = `${this.API}`
     return this.http.post<Genero>(url, genero);
   }
 
   putGenero(genero: Genero): Observable<Genero> {
-    const url = `${this.API}/EditaGeneroID/${genero.id}`
+    const url = `${this.API}/${genero.id}`
     return this.http.put<Genero>(url, genero)
   }
 
